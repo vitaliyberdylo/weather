@@ -1,0 +1,7 @@
+vitber_weather:
+    weather_provider: '%env(VITBER_WEATHER_PROVIDER)%'
+    cities: '%env(json:VITBER_CITIES)%'
+    open_weather_map:
+        api_url: '%env(OPEN_WEATHER_MAP_API_URL)%'
+        api_key: '%env(OPEN_WEATHER_MAP_API_KEY)%'
+        units: '%env(OPEN_WEATHER_MAP_UNITS)%'

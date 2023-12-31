@@ -42,7 +42,8 @@
         "symfony/web-link": "7.0.*",
         "symfony/yaml": "7.0.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "vitber/weather-bundle": "*@dev"
     },
     "config": {
         "allow-plugins": {
@@ -95,6 +96,9 @@
         }
     },
     "require-dev": {
+        "squizlabs/php_codesniffer": "@stable",
+        "phpmd/phpmd": "@stable",
+        "friendsofphp/php-cs-fixer": "@stable",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "7.0.*",
         "symfony/css-selector": "7.0.*",
@@ -103,5 +107,11 @@
         "symfony/phpunit-bridge": "^7.0",
         "symfony/stopwatch": "7.0.*",
         "symfony/web-profiler-bundle": "7.0.*"
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/vitaliyberdylo/WeatherBundle.git"
+        }
+    ]
 }

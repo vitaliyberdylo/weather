@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+        <div class="card shadow">
+            <div class="card-header">
+                <h3 class="card-title text-center">City Weather</h3>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select City
+                            </button>
+                            <ul class="dropdown-menu">
+                                {% for city in get_weather_cities() %}
+                                    <li><button class="dropdown-item city" type="button" data-url="{{ path('weather_city', {'city': city}) }}">{{ city }}</button></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="alert alert-danger" role="alert" style="display: none">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="overlay" id="loading">
+                                    <div class="text-center">
+                                        <div class="spinner-border">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><span class="align-content-lg-start">Temperature: </span><span id="temperature"></span></li>
+                                    <li class="list-group-item"><span>Status: </span><span id="status"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
